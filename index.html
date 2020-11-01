@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Manager</title>
+  </head>
+  <body>
+    <!-- Template Section - Start -->
+    <template id="project-input">
+      <form action="">
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input type="text" name="" id="title" />
+        </div>
+        <div class="form-control">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <div class="form-control">
+          <label for="people">People</label>
+          <input type="number" name="" step="1" min="0" max="10" id="people" />
+        </div>
+        <button type="submit">Add Project</button>
+      </form>
+    </template>
+    <!-- Template Section - End   -->
+
+    <!-- Template - Single Project - Start  -->
+    <template id="single-project">
+      <li></li>
+    </template>
+    <!-- Template - Single Project - End  -->
+
+    <!-- Template - Project List - Start  -->
+    <template id="project-list">
+      <section class="projects">
+        <header>
+          <h2></h2>
+        </header>
+        <ul></ul>
+      </section>
+    </template>
+    <!-- Template - Project List - End  -->
+
+    <!-- App - Section - Start  -->
+    <div id="app"></div>
+    <!-- App - Section - End   -->
+  </body>
+</html>
