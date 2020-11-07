@@ -122,8 +122,28 @@ button:active {
 }
 
 #user-input {
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid #ff0062;
   background: #f7f7f7;
+  width: 45%;
 }
+
+/* Custom Styles - Start  */
+
+/* form {
+  position: relative;
+  width: 45%;
+  margin: 30px auto 10px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  box-shadow: 0 0 6px #aaa;
+  padding: 30px;
+}
+*/
+form button {
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* Custom Styles - End  */
