@@ -1,30 +1,29 @@
-namespace App {
-    // Component Base Class 
-    export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
-        templateElement: HTMLTemplateElement // For the id - project-input - section
-        hostElement: T // For the id - app - section
-        element: U
 
-        constructor(templateId: string, hostElementId: string, insertAtStart: boolean, newElementId?: string) {
-            this.templateElement = document.getElementById(templateId)! as HTMLTemplateElement
-            this.hostElement = document.getElementById(hostElementId)! as T
+// Component Base Class 
+export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
+    templateElement: HTMLTemplateElement // For the id - project-input - section
+    hostElement: T // For the id - app - section
+    element: U
 
-            const importedNode = document.importNode(this.templateElement.content, true);
-            this.element = importedNode.firstElementChild as U;
+    constructor(templateId: string, hostElementId: string, insertAtStart: boolean, newElementId?: string) {
+        this.templateElement = document.getElementById(templateId)! as HTMLTemplateElement
+        this.hostElement = document.getElementById(hostElementId)! as T
 
-            if (newElementId)
-                this.element.id = newElementId
+        const importedNode = document.importNode(this.templateElement.content, true);
+        this.element = importedNode.firstElementChild as U;
 
-            this.attach(insertAtStart);
-        }
+        if (newElementId)
+            this.element.id = newElementId
 
-        private attach(insertAtBeginning: boolean) {
-            this.hostElement.insertAdjacentElement(insertAtBeginning ? 'afterbegin' : 'beforeend', this.element)
-        }
-
-        abstract configure(): void
-        abstract renderContent(): void
-
+        this.attach(insertAtStart);
     }
 
+    private attach(insertAtBeginning: boolean) {
+        this.hostElement.insertAdjacentElement(insertAtBeginning ? 'afterbegin' : 'beforeend', this.element)
+    }
+
+    abstract configure(): void
+    abstract renderContent(): void
+
 }
+
