@@ -1,6 +1,7 @@
+export const something = '...'
 
 // Component Base Class 
-export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
+export default abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     templateElement: HTMLTemplateElement // For the id - project-input - section
     hostElement: T // For the id - app - section
     element: U
