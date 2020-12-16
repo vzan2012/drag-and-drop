@@ -13,7 +13,7 @@
   "author": "Sitharaman Deepak Guptha",
   "license": "ISC",
   "dependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.6.1"
   },
   "devDependencies": {
     "ts-loader": "^8.0.11",
